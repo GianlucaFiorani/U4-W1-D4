@@ -13,17 +13,19 @@ public class Main {
         Volontario v2 = new Volontario("paola", 15, "Accetto lavoro sottopagato");
         Volontario v3 = new Volontario("JJ", 60, "Lavorato presso ...");
 
-        Dipendente[] dipendenti = {d1,d2,d3};
+        Dipendente[] dipendenti = {d1, d2, d3};
         int salarySum = 0;
-            for (int i=0; i<dipendenti.length; i++){
-                salarySum += dipendenti[i].calculateSalary();
-                System.out.println(dipendenti[i].getMatricola() + "stipendio ora" + dipendenti[i].calculateSalary());
+        for (int i = 0; i < dipendenti.length; i++) {
+            salarySum += dipendenti[i].calculateSalary();
+            System.out.println(dipendenti[i].getMatricola() + "stipendio ora" + dipendenti[i].calculateSalary());
+            if (i == dipendenti.length - 1) {
+                System.out.println("Salario totale orario :" + salarySum);
             }
-        System.out.println("Spesa al ora :" + salarySum);
         }
 
-        CheckIn[] checkIns = {};
-        for (int i=0; i< checkIns.length; i++) {
+
+        CheckIn[] checkIns = {d1, d2, d3, v1, v2, v3};
+        for (int i = 0; i < checkIns.length; i++) {
             checkIns[i].ceckIn();
         }
     }
